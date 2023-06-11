@@ -1,0 +1,35 @@
+{
+  "lang": "tr-tr",
+  "title": "EneftimBu - EneftimBu, NFT'lerinizi arttırılmış gerçeklik ile özelleştirin ve satın!",
+  "description": "EneftimBu, Artırılmış Gerçeklik ile NFT'ler oluşturmanıza ve satmanıza izin veren bir platformdur.",
+  "home": {
+    "title": "NFT'lerini Arttırılmış Gerçeklik ile özelleştir ve sat!",
+    "create": "Oluştur",
+    "discover": "Keşfet",
+    "more": "Eneftimbu hakkında daha fazla bilgi edin."
+  },
+  "navbar": {
+    "logo": "EneftimBu Logo",
+    "search": "Koleksiyon, NFT, Profil Ara",
+    "create": "Oluştur",
+    "trends": "Trend",
+    "discover": "Keşfet",
+    "wallet": "Cüzdan"
+  },
+  "footer": {
+    "followUs": "Gerçek zamanlı güncellemelerden haberdar olmak için bizi takip edin.",
+    "email": "E-posta",
+    "send": "Gönder"
+  },
+  "discover": {
+    "title": "Koleksiyonları Keşfet",
+    "buttons": ["Hepsi", "Trendler", "Resim", "Müzik", "Fotoğraf", "Spor Dalları", "Koleksiyonluk"],
+    "details": "Detaylar"
+  },
+  "profile": {
+    "follow": "Takip et",
+    "followers": "Takipçiler",
+    "following": "Takip edilenler",
+    "collections": "Koleksiyonlar"
+  }
+}

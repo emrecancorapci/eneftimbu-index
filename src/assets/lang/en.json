@@ -1,0 +1,35 @@
+{
+  "lang": "en-en",
+  "title": "EneftimBu - Create, Customize and Sell NFTs with Augmented Reality!",
+  "description": "EneftimBu is an web platform that allows you to create and sell NFTs with the power of Augmented Reality.",
+  "home": {
+    "title": "Customize and sell NFTs with Augmented Reality!",
+    "create": "Create",
+    "discover": "Discover",
+    "more": "Learn more about eneftimbu."
+  },
+  "navbar": {
+    "logo": "EneftimBu Logo",
+    "search": "Search Collection, NFT or Profile",
+    "create": "Create",
+    "trends": "Trends",
+    "discover": "Discover",
+    "wallet": "Wallet"
+  },
+  "footer": {
+    "followUs": "Follow us to get real-time updates.",
+    "email": "Email",
+    "send": "Send"
+  },
+  "discover": {
+    "title": "Explore Collections",
+    "buttons": ["All", "Trends", "Image", "Music", "Sports", "Photograph", "Collectibles"],
+    "details": "Details"
+  },
+  "profile": {
+    "follow": "Follow",
+    "followers": "Followers",
+    "following": "Following",
+    "collections": "Collections"
+  }
+}
