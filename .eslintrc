@@ -36,7 +36,13 @@
         "plugin:import/recommended",
         "plugin:n/recommended",
         "prettier"
-      ]
+      ],
+      "rules": {
+        "jsx-a11y/no-redundant-roles": "warn",
+        "react/react-in-jsx-scope": "off",
+        "unicorn/filename-case": "off",
+        "unicorn/prevent-abbreviations": "off"
+      }
     },
     { // Configuration for Jest test files.
       "files": ["**/*.test.ts", "**/*.test.tsx"],
