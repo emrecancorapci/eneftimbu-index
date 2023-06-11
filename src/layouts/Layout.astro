@@ -1,6 +1,6 @@
 ---
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -8,29 +8,56 @@ const { title } = Astro.props;
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="utf8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="root flex flex-col justify-center">
+      <slot />
+    </div>
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+  @import 'https://fonts.googleapis.com/css?family=Space+Grotesk:thin,extrelight,light,regular,regularitalic,medium,mediumitalic,semibold,semibolditalic,bold,bolditalic)';
+  @import 'https://fonts.googleapis.com/css?family=Chivo:thin,extrelight,light,regular,regularitalic,medium,mediumitalic,semibold,semibolditalic,bold,bolditalic)';
+
+  :root {
+    font-family: Chivo, sans-serif;
+  }
+
+  body {
+    overflow-x: hidden;
+    background: rgb(0 251 245);
+    background: linear-gradient(
+      90deg,
+      rgb(0 251 245) 0%,
+      rgb(0 61 218) 25%,
+      rgb(0 116 182) 50%,
+      rgb(0 144 118) 75%,
+      rgb(61 139 0) 100%
+    );
+  }
+
+  .root {
+    position: relative;
+    min-height: 100vh;
+    background: rgb(20 20 20);
+    background: linear-gradient(
+      180deg,
+      rgba(15, 15, 15, 1) 0%,
+      rgba(20, 20, 20, 0.95) 30%,
+      rgba(20, 20, 20, 0.85) 75%,
+      rgba(20, 20, 20, 0.7) 100%
+    );
+  }
+
+  code {
+    font-family: Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+      'Courier New', monospace;
+  }
 </style>
