@@ -1,3 +1,7 @@
+# other
+/public
+/src/assets/lang
+
 # build output
 dist/
 
