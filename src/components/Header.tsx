@@ -29,7 +29,7 @@ export default function Header(): React.JSX.Element {
         <div className="flex justify-center xl:w-1/2 w-full xl:pb-0 pb-3">
           <NavbarSearchBar text={navbar.search} />
         </div>
-        <div className="flex justify-center flex-row xl:w-1/3 lg:w-full items-center">
+        <div className="flex justify-center flex-row xl:w-1/3 w-full items-center">
           <nav className="flex flex-row w-full justify-evenly items-center">
             {navbarButtons.map(({ id, path, text }) => (
               <NavbarButton key={id} path={path} text={text} />
