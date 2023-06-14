@@ -1,15 +1,3 @@
-// import styled from 'styled-components';
-
-// const NavButton = styled.button`
-//   height: 48px;
-//   width: 100%;
-//   --bs-btn-color: rgb(255, 255, 255) !important;
-//   --bs-btn-bg: rgba(255, 255, 255, 0) !important;
-//   --bs-btn-border-width: 0px !important;
-//   --bs-btn-hover-color: white !important;
-//   --bs-btn-hover-bg: rgba(0, 0, 0, 0.3) !important;
-// `;
-
 export interface NavbarButtonProperties {
   path: string;
   text: string;

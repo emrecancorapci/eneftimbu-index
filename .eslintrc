@@ -18,9 +18,21 @@
     }
   },
   "overrides": [
-    { // Configuration for TypeScript files.
+    {
+      // Configuration for TypeScript files.
       "files": ["*.ts", "*.tsx"],
-      "plugins": ["@typescript-eslint", "react", "react-hooks", "jsx-a11y", "promise", "import", "unicorn", "testing-library", "react-refresh"],
+      "plugins": [
+        "@typescript-eslint",
+        "react",
+        "react-hooks",
+        "jsx-a11y",
+        "promise",
+        "import",
+        "unicorn",
+        "testing-library",
+        "react-refresh",
+        "tailwindcss"
+      ],
       "extends": [
         "eslint:recommended",
         "plugin:prettier/recommended",
@@ -29,7 +41,7 @@
         "plugin:jsx-a11y/recommended",
         "plugin:unicorn/recommended",
         "plugin:react-hooks/recommended",
-        "plugin:astro/recommended",
+        "plugin:tailwindcss/recommended",
         "standard-with-typescript",
         "plugin:security/recommended",
         "plugin:promise/recommended",
@@ -44,18 +56,41 @@
         "unicorn/prevent-abbreviations": "off"
       }
     },
-    { // Configuration for Jest test files.
+    {
+      // Configuration for Jest test files.
       "files": ["**/*.test.ts", "**/*.test.tsx"],
       "env": {
         "jest": true
       }
     },
-    { // Configuration for Astro files.
+    {
+      // Configuration for Astro files.
       "files": ["*.astro"],
       "parser": "astro-eslint-parser",
       "parserOptions": {
         "parser": "@typescript-eslint/parser",
         "extraFileExtensions": [".astro"]
+      },
+      "plugins": ["prettier", "tailwindcss", "jsx-a11y", "promise", "import", "unicorn", "testing-library"],
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended",
+        "plugin:jsx-a11y/recommended",
+        "plugin:unicorn/recommended",
+        "plugin:astro/recommended",
+        "plugin:security/recommended",
+        "plugin:promise/recommended",
+        "plugin:tailwindcss/recommended",
+        "plugin:import/recommended",
+        "plugin:n/recommended",
+        "standard-with-typescript",
+        "prettier"
+      ],
+      "rules": {
+        "jsx-a11y/no-redundant-roles": "warn",
+        "unicorn/filename-case": "off",
+        "unicorn/prevent-abbreviations": "off"
       }
     }
   ],
@@ -64,33 +99,5 @@
     "ecmaVersion": "latest",
     "sourceType": "module",
     "project": "./tsconfig.json"
-  },
-  "plugins": [
-    "react",
-    "prettier",
-    "jsx-a11y",
-    "promise",
-    "import",
-    "unicorn",
-    "testing-library"
-  ],
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
-    "plugin:jsx-a11y/recommended",
-    "plugin:unicorn/recommended",
-    "plugin:astro/recommended",
-    "plugin:security/recommended",
-    "plugin:promise/recommended",
-    "plugin:import/recommended",
-    "plugin:n/recommended",
-    "standard-with-typescript",
-    "prettier"
-  ],
-  "rules": {
-    "jsx-a11y/no-redundant-roles": "warn",
-    "unicorn/filename-case": "off",
-    "unicorn/prevent-abbreviations": "off"
   }
 }

@@ -1,0 +1,61 @@
+---
+export interface Props {
+  title: string;
+  uniqueId?: string;
+  type?: null | 'primary' | 'secondary' | 'active' | 'disabled';
+  size?: null | 'sm' | 'lg';
+  onClick: () => void;
+}
+
+const { title, type, size, onClick } = Astro.props;
+
+const uniqueId = Math.random().toString(36).slice(2, 9);
+
+const typeSelector = (type: Props['type']) => {
+  switch (type) {
+    case 'primary': {
+      return 'text-primary-dark bg-white border-0 hover:bg-primary-dark hover:text-white';
+    }
+    case 'secondary': {
+      return 'text-white bg-primary border   border-primary bg-opacity-5 hover:bg-opacity-10';
+    }
+    case 'active': {
+      return 'text-white bg-primary border-0 hover:bg-primary hover:text-white';
+    }
+    case 'disabled': {
+      return 'text-white bg-natural-400 border-0 cursor-not-allowed';
+    }
+    default: {
+      return 'text-white bg-natural-900 border-0 hover:bg-white hover:natural-900';
+    }
+  }
+};
+
+const sizeSelector = (size: Props['size']) => {
+  switch (size) {
+    case 'sm': {
+      return 'px-4 py-2 text-md';
+    }
+    case 'lg': {
+      return 'px-6 h-14 text-xl';
+    }
+    default: {
+      return 'px-5 h-10 text-lg';
+    }
+  }
+};
+
+const buttonClass = `btn-${title} text-center font-bold transition-all rounded-lg w-full max-w-sm`;
+const typeClass = typeSelector(type);
+const sizeClass = sizeSelector(size);
+---
+
+<button type="button" class={`${buttonClass} ${typeClass} ${sizeClass}`}>{title}</button>
+
+<script define:vars={{ title, onClick, uniqueId }}>
+  const buttons = document.querySelectorAll(`button.btn-${title}-${uniqueId}`);
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => onClick());
+  });
+</script>

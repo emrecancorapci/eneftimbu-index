@@ -1,0 +1,53 @@
+---
+import { t } from 'astro-i18n';
+
+const socialLinks = [
+  {
+    order: 1,
+    name: 'LinkedIn',
+    link: 'https://www.linkedin.com/company/eneftimbu/',
+    icon: '/icon/linkedin-icon.png',
+  },
+  {
+    order: 2,
+    name: 'Instagram',
+    link: 'https://www.instagram.com/eneftimbu/',
+    icon: '/icon/instagram-icon.png',
+  },
+  {
+    order: 3,
+    name: 'Twitter',
+    link: 'https://twitter.com/eneftimbucom',
+    icon: '/icon/twitter-icon.png',
+  },
+];
+---
+
+<footer class="flex w-screen flex-col justify-center gap-4 bg-black bg-opacity-20 py-8 backdrop-blur-sm">
+  <p class="px-4 text-center text-white">{t('footer.followUs')}</p>
+  <div class="flex w-full flex-col items-center justify-center gap-4 lg:flex-row">
+    <div>
+      <form class="align-items-center flex w-auto flex-row lg:w-1/6">
+        <input
+          class="h-10 max-w-md rounded-lg ps-4"
+          style={{ minWidth: '360px' }}
+          type="email"
+          placeholder={t('footer.email')}
+          required
+        />
+        <button class="fw-bold relative -left-16 border-0 bg-white font-bold text-primary-dark" type="submit">
+          {t('footer.send')}
+        </button>
+      </form>
+    </div>
+    <div class="flex w-auto flex-row items-center justify-evenly gap-6">
+      {
+        socialLinks.map(({ order, name, link, icon }) => (
+          <a href={link}>
+            <img src={icon} alt={name} class="h-6" />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</footer>
