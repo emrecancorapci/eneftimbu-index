@@ -22,8 +22,8 @@ astroI18n.init(Astro);
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="flex flex-col justify-between">
-    <div class="root"></div>
+  <body class="flex min-h-screen flex-col justify-between overflow-x-hidden">
+    <div class="root absolute left-0 top-0 -z-10 h-full w-full"></div>
     <Header />
     <slot />
     <Footer />
@@ -34,8 +34,6 @@ astroI18n.init(Astro);
   @import 'https://fonts.googleapis.com/css?family=Chivo:thin,extrelight,light,regular,regularitalic,medium,mediumitalic,semibold,semibolditalic,bold,bolditalic)';
 
   body {
-    overflow-x: hidden;
-    min-height: 100vh;
     background: rgb(0 251 245);
     background: linear-gradient(
       90deg,
@@ -48,18 +46,13 @@ astroI18n.init(Astro);
   }
 
   .root {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
     background: rgb(20 20 20);
-    background: linear-gradient(180deg, #0f0f0f 0%, #141414f2 30%, #141414d9 75%, #141414b3 100%);
-  }
-
-  code {
-    font-family: Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
-      'Courier New', monospace;
+    background: linear-gradient(
+      180deg,
+      rgb(20 20 20) 0%,
+      rgb(20 20 20 / 0.95) 20%,
+      rgb(20 20 20 / 0.7) 75%,
+      rgba(20 20 20 / 0.7) 100%
+    );
   }
 </style>

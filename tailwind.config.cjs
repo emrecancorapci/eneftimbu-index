@@ -30,6 +30,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Chivo', 'sans-serif'],
+      display: ['Space Grotesk', 'sans-serif'],
     },
   },
   plugins: [],
