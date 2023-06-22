@@ -22,12 +22,11 @@ astroI18n.init(Astro);
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
-    <div class="root flex flex-col justify-center">
-      <Header />
-      <slot />
-      <Footer />
-    </div>
+  <body class="flex flex-col justify-between">
+    <div class="root"></div>
+    <Header />
+    <slot />
+    <Footer />
   </body>
 </html>
 <style is:global>
@@ -36,6 +35,7 @@ astroI18n.init(Astro);
 
   body {
     overflow-x: hidden;
+    min-height: 100vh;
     background: rgb(0 251 245);
     background: linear-gradient(
       90deg,
@@ -48,8 +48,12 @@ astroI18n.init(Astro);
   }
 
   .root {
-    position: relative;
-    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
     background: rgb(20 20 20);
     background: linear-gradient(180deg, #0f0f0f 0%, #141414f2 30%, #141414d9 75%, #141414b3 100%);
   }

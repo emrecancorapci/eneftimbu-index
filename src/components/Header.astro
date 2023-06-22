@@ -2,7 +2,7 @@
 import { t } from 'astro-i18n';
 
 import NavbarSearchBar from './header/NavbarSearchBar.tsx';
-import NavbarButton from './header/NavbarButton.tsx';
+import Button from './common/Button.tsx';
 
 const hamburgerIcon = '/icon/hamburger-icon.png';
 
@@ -24,8 +24,16 @@ const navbarButtons = [
     </div>
     <div class="flex w-full flex-row items-center justify-center xl:w-1/3">
       <nav class="flex w-full flex-row items-center justify-evenly">
-        {navbarButtons.map(({ path, text }) => <NavbarButton path={path} text={text} />)}
-        <a href="/" class="align-items-center rounded-2 flex h-full rounded px-3 py-2">
+        {
+          navbarButtons.map(({ path, text }) => (
+            <a href={path}>
+              <Button type="link" size="link">
+                {text}
+              </Button>
+            </a>
+          ))
+        }
+        <a href="/" class="flex h-full rounded px-3 py-2">
           <img src={hamburgerIcon} alt="" />
         </a>
       </nav>
