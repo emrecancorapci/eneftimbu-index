@@ -2,6 +2,8 @@ interface Props {
   type?: null | 'primary' | 'secondary' | 'link' | 'active' | 'disabled';
   size?: null | 'sm' | 'lg' | 'link';
   textSize?: 'sm' | 'md' | 'lg' | 'xl';
+  weight?: 'thin' | 'extralight' | 'light' | 'normal' | 'medium' | 'semibold' | 'bold' | 'extrabold' | 'black';
+  className?: string;
   onClick?: () => void;
   children?: React.ReactNode;
 }
@@ -32,27 +34,35 @@ const typeSelector: (type: Props['type']) => string = (type: Props['type']) => {
 const sizeSelector: (size: Props['size']) => string = (size: Props['size']) => {
   switch (size) {
     case 'sm': {
-      return 'px-4 py-2 h-8 text-md';
+      return 'px-4 py-2 h-8';
     }
     case 'lg': {
-      return 'px-6 h-14 text-xl';
+      return 'px-6 h-14';
     }
     case 'link': {
-      return 'px-5 h-12 text-md';
+      return 'px-5 h-12';
     }
     default: {
-      return 'px-5 h-10 text-lg';
+      return 'px-5 h-10';
     }
   }
 };
 
-export default function Button({ type, size, textSize = 'md', onClick, children }: Props): JSX.Element {
+export default function Button({
+  type,
+  size,
+  textSize = 'md',
+  weight = 'bold',
+  onClick,
+  className = '',
+  children,
+}: Props): JSX.Element {
   const typeClass = typeSelector(type);
   const sizeClass = sizeSelector(size);
-  const textClass = `text-${textSize}`;
+  const textClass = `text-${textSize} font-${weight}`;
   return (
     <button
-      className={`${textClass} w-full max-w-sm rounded-lg text-center font-bold transition-colors ${typeClass} ${sizeClass}`}
+      className={`${textClass} w-full max-w-sm rounded-lg text-center font-bold transition-colors ${textClass} ${typeClass} ${sizeClass} ${className}`}
       onClick={onClick}
     >
       {children}

@@ -1,10 +1,10 @@
 type DefaultLangCode = "en"
-type SupportedLangCode = string
+type SupportedLangCode = "tr"
 type LangCode = DefaultLangCode | SupportedLangCode
 type RouteUri = | "/" 
 type RouteParams = {"/": undefined; }
-type TranslationPath = "title" | "description" | "home.title" | "home.create" | "home.discover" | "home.more" | "navbar.search" | "navbar.create" | "navbar.trends" | "navbar.discover" | "navbar.wallet" | "footer.followUs" | "footer.email" | "footer.send" | "discover.title.translation" | "discover.details.translation" | "profile.follow.translation" | "profile.followers.translation" | "profile.following.translation" | "profile.collections.translation"
-type TranslationOptions = { "title": {} | undefined; "description": {} | undefined; "home.title": {} | undefined; "home.create": {} | undefined; "home.discover": {} | undefined; "home.more": {} | undefined; "navbar.search": {} | undefined; "navbar.create": {} | undefined; "navbar.trends": {} | undefined; "navbar.discover": {} | undefined; "navbar.wallet": {} | undefined; "footer.followUs": {} | undefined; "footer.email": {} | undefined; "footer.send": {} | undefined; "discover.title.translation": {} | undefined; "discover.details.translation": {} | undefined; "profile.follow.translation": {} | undefined; "profile.followers.translation": {} | undefined; "profile.following.translation": {} | undefined; "profile.collections.translation": {} | undefined; }
+type TranslationPath = "title" | "description" | "home.title" | "home.create" | "home.discover" | "home.more" | "navbar.search" | "navbar.home" | "navbar.create" | "navbar.trends" | "navbar.discover" | "navbar.wallet" | "footer.followUs" | "footer.email" | "footer.send" | "discover.title" | "discover.details" | "profile.follow" | "profile.followers" | "profile.following" | "profile.collections"
+type TranslationOptions = { "title": {} | undefined; "description": {} | undefined; "home.title": {} | undefined; "home.create": {} | undefined; "home.discover": {} | undefined; "home.more": {} | undefined; "navbar.search": {} | undefined; "navbar.home": {} | undefined; "navbar.create": {} | undefined; "navbar.trends": {} | undefined; "navbar.discover": {} | undefined; "navbar.wallet": {} | undefined; "footer.followUs": {} | undefined; "footer.email": {} | undefined; "footer.send": {} | undefined; "discover.title": {} | undefined; "discover.details": {} | undefined; "profile.follow": {} | undefined; "profile.followers": {} | undefined; "profile.following": {} | undefined; "profile.collections": {} | undefined; }
 
 declare module "astro-i18n" {
 	export * from "astro-i18n/"

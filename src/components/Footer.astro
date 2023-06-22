@@ -27,10 +27,9 @@ const socialLinks = [
   <p class="px-4 text-center text-white">{t('footer.followUs')}</p>
   <div class="flex w-full flex-col items-center justify-center gap-4 lg:flex-row">
     <div>
-      <form class="flex w-auto flex-row lg:w-1/6">
+      <form class="flex w-min flex-row lg:w-1/6">
         <input
-          class="h-10 max-w-md rounded-lg ps-4"
-          style={{ minWidth: '360px' }}
+          class="min-w-[360px} h-10 max-w-md rounded-lg ps-4"
           type="email"
           placeholder={t('footer.email')}
           required

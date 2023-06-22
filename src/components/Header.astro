@@ -7,33 +7,34 @@ import Button from './common/Button.tsx';
 const hamburgerIcon = '/icon/hamburger-icon.png';
 
 const navbarButtons = [
-  { id: 1, text: t('navbar.create'), path: '/Create' },
-  { id: 2, text: t('navbar.trends'), path: '/Trends' },
-  { id: 3, text: t('navbar.discover'), path: '/Discover' },
-  { id: 4, text: t('navbar.wallet'), path: '/Wallet' },
+  { id: 1, text: t('navbar.home'), path: '/' },
+  { id: 2, text: t('navbar.create'), path: '/Create' },
+  { id: 3, text: t('navbar.trends'), path: '/Trends' },
+  { id: 4, text: t('navbar.discover'), path: '/Discover' },
+  { id: 5, text: t('navbar.wallet'), path: '/Wallet' },
 ];
 ---
 
 <header class="flex w-screen justify-center">
-  <div class="flex w-xl flex-row flex-wrap items-center justify-evenly pt-3">
-    <a class="flex w-full justify-center pb-3 xl:w-1/6 xl:pb-0" href="/">
+  <div class="flex w-xl flex-row flex-wrap items-center justify-between pt-3">
+    <a class="flex w-full justify-center xl:w-auto xl:pb-0" href="/">
       <img src="/images/eneftimbu.png" alt="EneftimBu Logo" />
     </a>
-    <div class="flex w-full justify-center pb-3 xl:w-1/2 xl:pb-0">
+    <div class="flex h-min w-full justify-center px-4 py-2 xl:w-auto xl:min-w-[28rem] xl:py-0">
       <NavbarSearchBar text={t('navbar.search')} />
     </div>
-    <div class="flex w-full flex-row items-center justify-center xl:w-1/3">
-      <nav class="flex w-full flex-row items-center justify-evenly">
+    <div class="flex w-full flex-row items-center justify-center xl:w-min">
+      <nav class="flex w-full flex-row items-center justify-evenly xl:gap-2">
         {
           navbarButtons.map(({ path, text }) => (
             <a href={path}>
-              <Button type="link" size="link">
+              <Button type="link" size="link" className="px-0 xl:px-3">
                 {text}
               </Button>
             </a>
           ))
         }
-        <a href="/" class="flex h-full rounded px-3 py-2">
+        <a href="/" class="flex h-full rounded px-0 py-2">
           <img src={hamburgerIcon} alt="" />
         </a>
       </nav>
