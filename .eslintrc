@@ -18,9 +18,14 @@
     }
   },
   "overrides": [
-    {
-      // Configuration for TypeScript files.
+    { // Configuration for TypeScript files.
       "files": ["*.ts", "*.tsx"],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+      },
       "plugins": [
         "@typescript-eslint",
         "react",
@@ -56,15 +61,13 @@
         "unicorn/prevent-abbreviations": "off"
       }
     },
-    {
-      // Configuration for Jest test files.
+    { // Configuration for Jest test files.
       "files": ["**/*.test.ts", "**/*.test.tsx"],
       "env": {
         "jest": true
       }
     },
-    {
-      // Configuration for Astro files.
+    { // Configuration for Astro files.
       "files": ["*.astro"],
       "parser": "astro-eslint-parser",
       "parserOptions": {
@@ -93,11 +96,5 @@
         "unicorn/prevent-abbreviations": "off"
       }
     }
-  ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module",
-    "project": "./tsconfig.json"
-  }
+  ]
 }
