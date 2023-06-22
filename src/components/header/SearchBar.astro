@@ -1,0 +1,16 @@
+---
+import { t } from "astro-i18n";
+// TODO: Add functionality to the search bar
+---
+
+<div class="flex justify-center items-center w-full px-6 pe-5 -m-10">
+    <form class="flex justify-center items-center w-full">
+      <img src="/icon/search-icon.png" class="w-6 h-6 relative start-10" alt="Search Icon" />
+      <input
+        type="text"
+        class="h-12 w-full xl:max-w-md lg:w-full bg-white bg-opacity-5 border-none border-0 rounded-lg text-white font-extralight text-base leading-6 ps-14 pe-3"
+        placeholder={t("navbar.search")}
+        required
+      />
+    </form>
+  </div>
