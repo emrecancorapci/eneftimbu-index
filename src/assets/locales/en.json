@@ -13,11 +13,5 @@
   "navbar.wallet": "Wallet",
   "footer.followUs": "Follow us to get real-time updates.",
   "footer.email": "Email",
-  "footer.send": "Send",
-  "discover.title": "Explore Collections",
-  "discover.details": "Details",
-  "profile.follow": "Follow",
-  "profile.followers": "Followers",
-  "profile.following": "Following",
-  "profile.collections": "Collections"
+  "footer.send": "Send"
 }
